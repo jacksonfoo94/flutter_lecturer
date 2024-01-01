@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml",
+            "map": [
+                {
+                    "source": "/Users/ks.foo/.gradle/caches/transforms-3/332e4504588a0e349323c2000f83fc4d/transformed/core-1.6.0/res/values-eu/values-eu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
