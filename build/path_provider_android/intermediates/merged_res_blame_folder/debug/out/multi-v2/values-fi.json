@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/ks.foo/Downloads/tw_starting_project-main/build/path_provider_android/intermediates/res/merged/debug/values-fi/values-fi.xml",
+            "map": [
+                {
+                    "source": "/Users/ks.foo/.gradle/caches/transforms-3/332e4504588a0e349323c2000f83fc4d/transformed/core-1.6.0/res/values-fi/values-fi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/ks.foo/Downloads/tw_starting_project-main/build/path_provider_android/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml",
+            "map": [
+                {
+                    "source": "/Users/ks.foo/.gradle/caches/transforms-3/332e4504588a0e349323c2000f83fc4d/transformed/core-1.6.0/res/values-fi/values-fi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
