@@ -22,7 +22,7 @@ class SplashPage extends StatelessWidget {
                 return ActionText(onTap: () {
                   switch(index) {
                     case 0 : {
-                      AutoRouter.of(context).push(const DummyUIRoute());
+                      AutoRouter.of(context).push(const DummyUIFirstRoute());
                     }
                   }
                 }, title: Constants.homePageListing[index].title, desc: Constants.homePageListing[index].description);
