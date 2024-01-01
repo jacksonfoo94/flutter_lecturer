@@ -1,8 +1,8 @@
-#Mon Jan 01 19:30:02 MYT 2024
-base.0=/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
-base.2=/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/dex/debug/mergeLibDexDebug/classes_0.dex
-base.3=/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/dex/debug/mergeLibDexDebug/classes_1.dex
+#Mon Jan 01 20:24:56 MYT 2024
+base.0=/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/build/app/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
+base.2=/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/build/app/intermediates/dex/debug/mergeLibDexDebug/classes_0.dex
+base.3=/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/build/app/intermediates/dex/debug/mergeLibDexDebug/classes_1.dex
 path.0=classes.dex
 path.1=classes.dex
 path.2=classes_0.dex

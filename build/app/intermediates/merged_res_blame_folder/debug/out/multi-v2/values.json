@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/ks.foo/Downloads/tw_starting_project-main/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

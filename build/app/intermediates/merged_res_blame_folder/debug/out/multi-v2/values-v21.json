@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/ks.foo/.gradle/caches/transforms-3/332e4504588a0e349323c2000f83fc4d/transformed/core-1.6.0/res/values-v21/values-v21.xml",

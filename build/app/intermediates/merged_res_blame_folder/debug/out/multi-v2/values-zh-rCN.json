@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ks.foo/Downloads/tw_starting_project-main/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml",
+            "outputFile": "/Users/ks.foo/flutter/flutter_lesson/flutter_lecturer/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml",
             "map": [
                 {
                     "source": "/Users/ks.foo/.gradle/caches/transforms-3/332e4504588a0e349323c2000f83fc4d/transformed/core-1.6.0/res/values-zh-rCN/values-zh-rCN.xml",
