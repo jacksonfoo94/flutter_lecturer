@@ -8,6 +8,7 @@ import 'package:trinity_lecture_app/presentation/widgets/molecules/action_text.d
 import 'package:trinity_lecture_app/presentation/widgets/molecules/platform_app_bar.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/grid_card.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/news_card.dart';
+import 'package:trinity_lecture_app/presentation/widgets/organisms/text_form_field.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/ui_helper.dart';
 
 
@@ -165,23 +166,10 @@ class DummyUIPage extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
-                          child: Container(
-                            padding: EdgeInsets.all(8.0),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey), // Grey border
-                              borderRadius: BorderRadius.circular(8.0), // Rounded corners
-                            ),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  prefixIcon: Icon(Icons.email), // Replace with your desired image/icon
-                                  hintText: 'Enter your email...',
-                                  border: InputBorder.none,
-                                  hintStyle: context.textTheme.bodySmall?.copyWith(
-                                    color: ColorConstant.grey,
-                                  )
-                              ),
-                            )
-                          ),
+                          child: const TextFormFieldCustom(
+                            preffixIcon: Icon(Icons.email), // Replace with your desired image/icon
+                            hintText: 'Enter your email...',
+                          )
                         )
                       ],
                     ),
