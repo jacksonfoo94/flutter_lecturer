@@ -191,7 +191,7 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
                         ),
                       ],
                     ),
-                    Text(title: "Please calculate button to get the result")
+                    Text("Please calculate button to get the result")
                   ]),
                 )
               ],
