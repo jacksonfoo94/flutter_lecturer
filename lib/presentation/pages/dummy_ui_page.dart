@@ -1,22 +1,20 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:trinity_lecture_app/core/commons/colors_const.dart';
 import 'package:trinity_lecture_app/core/commons/constants.dart';
 import 'package:trinity_lecture_app/core/routes/app_router.gr.dart';
-import 'package:trinity_lecture_app/presentation/pages/dummy_ui.dart';
 import 'package:trinity_lecture_app/presentation/widgets/atoms/text_theme_extension.dart';
 import 'package:trinity_lecture_app/presentation/widgets/molecules/action_text.dart';
+import 'package:trinity_lecture_app/presentation/widgets/molecules/platform_app_bar.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/grid_card.dart';
+import 'package:trinity_lecture_app/presentation/widgets/organisms/news_card.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/ui_helper.dart';
 
-import '../../core/commons/colors_const.dart';
-import '../widgets/molecules/chip.dart';
-import '../widgets/molecules/platform_app_bar.dart';
-import '../widgets/organisms/news_card.dart';
 
 @RoutePage()
-class DummyUIFirstPage extends StatelessWidget {
+class DummyUIPage extends StatelessWidget {
 
-  const DummyUIFirstPage({super.key});
+  const DummyUIPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class DummyUIFirstPage extends StatelessWidget {
                 padding: UIHelper.padding(vertical: 10, horizontal: 24),
                 child: ActionText(onTap: () {
                   AutoRouter.of(context).push(const DummyUIRoute());
-                }, title: "Next", desc: "Tab Bar, GridView, ListView"),
+                }, title: "Next", desc: "Tab Bar, GridView, ListView",),
               ),
               Container(
                 padding: UIHelper.padding(vertical: 10, horizontal: 24),
@@ -48,7 +46,7 @@ class DummyUIFirstPage extends StatelessWidget {
                     ),
                     UIHelper.verticalSpace(12),
                     Container(
-                        child: NewsCard(imgSrc: Constants.dummyImg, title: "How can I be flutter developer Expert", desc: "Jill Lepore . 23 May 2023")
+                        child: NewsCard(imgSrc: Constants.dummyImg, title: "How can I be flutter developer Expert", desc: "Jill Lepore . 23 May 2023",)
                     )
                   ],
                 ),
@@ -67,9 +65,9 @@ class DummyUIFirstPage extends StatelessWidget {
                     UIHelper.verticalSpace(12),
                     Column(
                         children: [
-                          NewsCard(imgSrc: Constants.dummyImg, title: "How can I be flutter developer Expert", desc: "Jill Lepore . 23 May 2023"),
+                          NewsCard(imgSrc: Constants.dummyImg, title: "How can I be flutter developer Expert", desc: "Jill Lepore . 23 May 2023",),
                           UIHelper.verticalSpace(12),
-                          NewsCard(imgSrc: Constants.dummyImg, title: "How can I be flutter developer Expert", desc: "Jill Lepore . 23 May 2023")
+                          NewsCard(imgSrc: Constants.dummyImg, title: "How can I be flutter developer Expert", desc: "Jill Lepore . 23 May 2023",)
                         ]
                     )
                   ],
@@ -109,17 +107,17 @@ class DummyUIFirstPage extends StatelessWidget {
                         children: [
                           GridCard(
                               imgSrc: Constants.dummyImg,
-                              title: "Container ${1}"
+                              title: "Container ${1}",
                           ),
                           UIHelper.horizontalSpace(20),
                           GridCard(
                               imgSrc: Constants.dummyImg,
-                              title: "Container ${2}"
+                              title: "Container ${2}",
                           ),
                           UIHelper.horizontalSpace(20),
                           GridCard(
                               imgSrc: Constants.dummyImg,
-                              title: "Container ${3}"
+                              title: "Container ${3}",
                           ),
                         ],
                       ),
@@ -207,13 +205,13 @@ class DummyUIFirstPage extends StatelessWidget {
                         Expanded(
                           child: GridCard(
                               imgSrc: Constants.dummyImg,
-                              title: "Container ${1}"
+                              title: "Container ${1}",
                           ),
                         ),
                         UIHelper.horizontalSpace(20),
                         GridCard(
                             imgSrc: Constants.dummyImg,
-                            title: "Container ${3}"
+                            title: "Container ${3}",
                         ),
                       ],
                     ),
