@@ -22,6 +22,9 @@ class MainPage extends StatelessWidget {
                     case 0 : {
                       AutoRouter.of(context).push(const DummyUIRoute());
                     }
+                    case 1 : {
+                      AutoRouter.of(context).push(CounterRoute());
+                    }
                   }
                 }, title: Constants.homePageListing[index].title, desc: Constants.homePageListing[index].description);
               }
