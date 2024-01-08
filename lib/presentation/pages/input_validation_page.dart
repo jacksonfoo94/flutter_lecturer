@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:trinity_lecture_app/presentation/widgets/atoms/text_theme_extension.dart';
 import 'package:trinity_lecture_app/presentation/widgets/molecules/platform_app_bar.dart';
+import 'package:trinity_lecture_app/presentation/widgets/molecules/required_text.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/text_form_field.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/ui_helper.dart';
 
@@ -45,20 +46,7 @@ class _InputValidationPageState extends State<InputValidationPage> {
               ),
             ),
             UIHelper.verticalSpace(32),
-            RichText(
-              text: TextSpan(
-                text: 'Name ',
-                style: context.textTheme.bodyMedium?.copyWith(
-                  color: ColorConstant.black,
-                ),
-                children: const <TextSpan>[
-                  TextSpan(
-                    text: '*',
-                    style: TextStyle(color: Colors.red),
-                  ),
-                ],
-              ),
-            ),
+            RequiredText(title: "Name", required: true,),
             UIHelper.verticalSpace(8),
             TextFormFieldCustom(
               preffixIcon: Icon(Icons.person), // Replace with your desired image/icon
@@ -72,20 +60,7 @@ class _InputValidationPageState extends State<InputValidationPage> {
               },
             ),
             UIHelper.verticalSpace(16),
-            RichText(
-              text: TextSpan(
-                text: 'Email ',
-                style: context.textTheme.bodyMedium?.copyWith(
-                  color: ColorConstant.black,
-                ),
-                children: const <TextSpan>[
-                  TextSpan(
-                    text: '*',
-                    style: TextStyle(color: Colors.red),
-                  ),
-                ],
-              ),
-            ),
+            RequiredText(title: "Email", required: true,),
             UIHelper.verticalSpace(8),
             TextFormFieldCustom(
               preffixIcon: Icon(Icons.email), // Replace with your desired image/icon

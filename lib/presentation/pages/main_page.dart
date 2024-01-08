@@ -28,6 +28,9 @@ class MainPage extends StatelessWidget {
                     case 2 : {
                       AutoRouter.of(context).push(InputValidationRoute());
                     }
+                    case 3 : {
+                      AutoRouter.of(context).push(SimpleCalculatorRoute());
+                    }
                   }
                 }, title: Constants.homePageListing[index].title, desc: Constants.homePageListing[index].description);
               }

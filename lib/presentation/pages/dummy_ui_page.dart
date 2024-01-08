@@ -31,7 +31,7 @@ class DummyUIPage extends StatelessWidget {
               Container(
                 padding: UIHelper.padding(vertical: 10, horizontal: 24),
                 child: ActionText(onTap: () {
-                  AutoRouter.of(context).push(const DummyUIRoute());
+                  AutoRouter.of(context).push(const DummyUiSecondRoute());
                 }, title: "Next", desc: "Tab Bar, GridView, ListView",),
               ),
               Container(
