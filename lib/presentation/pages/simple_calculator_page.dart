@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:trinity_lecture_app/presentation/widgets/atoms/text_theme_extension.dart';
+import 'package:trinity_lecture_app/presentation/widgets/molecules/action_text.dart';
 import 'package:trinity_lecture_app/presentation/widgets/molecules/platform_app_bar.dart';
 import 'package:trinity_lecture_app/presentation/widgets/molecules/required_text.dart';
 import 'package:trinity_lecture_app/presentation/widgets/organisms/text_form_field.dart';
@@ -23,6 +24,7 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
   List<bool> isSelected = [true, false, false]; // Track button selection
   List<String> items = ["Add", "Substract", "Multiply", "Divide", "Pow"];
   List<String> itemsSymbol = ["+", "-", "X", "/", "^"];
+  List<String> history = [];
   String selectedValue = "";
   String selectedSymbol = "";
   String firstNumber = "";
@@ -31,44 +33,43 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
 
   void buttonPressed() {
     answer = "...";
-    if(firstNumber.isNotEmpty && secondNumber.isNotEmpty){
+    if (firstNumber.isNotEmpty && secondNumber.isNotEmpty) {
       var first = int.parse(firstNumber);
       var second = int.parse(secondNumber);
-      switch(selectedSymbol) {
-        case "+" :
-        {
-          answer = (first + second).toString();
-        }
-        case "-" :
+      switch (selectedSymbol) {
+        case "+":
+          {
+            answer = (first + second).toString();
+          }
+        case "-":
           {
             answer = (first - second).toString();
           }
-        case "X" :
+        case "X":
           {
             answer = (first * second).toString();
           }
-        case "/" :
+        case "/":
           {
             answer = (first / second).toString();
           }
-        case "^" :
+        case "^":
           {
             print("### innnn");
             answer = (pow(first, second)).toString();
           }
       }
 
-
+      history.add("$firstNumber $selectedSymbol $secondNumber = $answer");
     }
 
-    setState(() {
-    });
+    setState(() {});
   }
 
   void onFirstChangedHandler(String? value) {
     // ignore: curly_braces_in_flow_control_structures
     setState(() {
-      if (value != null){
+      if (value != null) {
         firstNumber = value;
       } else {
         firstNumber = "";
@@ -81,7 +82,7 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
   void onSecondChangedHandler(String? value) {
     // ignore: curly_braces_in_flow_control_structures
     setState(() {
-      if (value != null){
+      if (value != null) {
         secondNumber = value;
       } else {
         secondNumber = "";
@@ -191,7 +192,20 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
                         ),
                       ],
                     ),
-                    Text("Please calculate button to get the result")
+                    Text("Please calculate button to get the result"),
+                    UIHelper.verticalSpace(16),
+                    Text(
+                      "HISTORY",
+                      style: context.textTheme.bodyMedium?.copyWith(
+                        color: ColorConstant.green,
+                      ),
+                    ),
+                    Expanded(
+                        child: ListView.builder(
+                            itemCount: history.length,
+                            itemBuilder: (context, index) {
+                              return Text(history[index]);
+                            }))
                   ]),
                 )
               ],
