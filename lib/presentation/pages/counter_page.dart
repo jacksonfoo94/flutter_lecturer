@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trinity_lecture_app/core/utils/counter_cubit.dart';
 import 'package:trinity_lecture_app/presentation/widgets/atoms/text_theme_extension.dart';
 import 'package:trinity_lecture_app/presentation/widgets/molecules/platform_app_bar.dart';
 
@@ -25,35 +27,34 @@ class _CounterPageState extends State<CounterPage> {
         ),
       ),
       body: Center(
-        child: Text(
-          '$counter',
-          style: context.textTheme.headlineLarge?.copyWith(
-            color: ColorConstant.black,
-          ),
-        ),
-      ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            FloatingActionButton(
+        child: BlocBuilder<CounterCubit, int>(
+            builder: (context, state) {
+              return Text(
+                '$state',
+                style: context.textTheme.headlineLarge?.copyWith(
+                  color: ColorConstant.black,
+                )
+              );
+            }
+            ),
+            ),
+              floatingActionButton: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+              FloatingActionButton(
               onPressed: () {
-                setState(() {
-                  counter++;
-                  print("### $counter");
-                });
+                context.read<CounterCubit>().increment();
               },
               child: Icon(Icons.add),
-            ),
-            SizedBox(height: 16.0),
-            FloatingActionButton(
+              ),
+              SizedBox(height: 16.0),
+              FloatingActionButton
+            (
               onPressed: () {
-                setState(() {
-                  counter--;
-                  print("### $counter");
-                });
+                context.read<CounterCubit>().decrement();
               },
               child: Icon(Icons.remove),
             ),

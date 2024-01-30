@@ -60,7 +60,7 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
           }
       }
 
-      history.add("$firstNumber $selectedSymbol $secondNumber = $answer");
+      history.add("$firstNumber $selectedSymbol $secondNumber");
     }
 
     setState(() {});
@@ -99,8 +99,7 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
             'Simple Calculator',
           ),
         ),
-        body: SingleChildScrollView(
-          child: Padding(
+        body: Padding(
             padding: UIHelper.padding(vertical: 16, horizontal: 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,15 +201,52 @@ class _SimpleCalculatorPageState extends State<SimpleCalculatorPage> {
                     ),
                     Expanded(
                         child: ListView.builder(
-                            itemCount: history.length,
-                            itemBuilder: (context, index) {
-                              return Text(history[index]);
-                            }))
+                          itemCount: history.length,
+                          itemBuilder: (context, index) {
+                            return Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        history[index],
+                                        style: TextStyle(
+                                          color: ColorConstant.black,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      onTap: () {
+                                        var textArray = history[index].split(" ");
+                                        firstNumber = textArray[0];
+                                        selectedSymbol = textArray[1];
+                                        secondNumber = textArray[2];
+                                        setState(() {
+                                          buttonPressed();
+                                        });
+                                      },
+                                      child: Text(
+                                        "Re-Apply",
+                                        style: TextStyle(
+                                          color: ColorConstant.primary,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Divider(), // Divider between history items
+                              ],
+                            );
+                          },
+                        ))
                   ]),
                 )
               ],
             ),
           ),
-        ));
+        );
   }
 }
